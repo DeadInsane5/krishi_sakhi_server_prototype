@@ -1,0 +1,22 @@
+{
+  "name": "krishi_sakhi_server_prototype",
+  "version": "1.0.0",
+  "description": "Node.js + Express backend for **Krishi Sakhi AgriAI**, an integrated AI-powered farming assistant for Kerala's smallholder farmers.   This server handles API requests, authentication, AI orchestration, model inference, pest detection verification, community sync, and data aggregation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeadInsane5/krishi_sakhi_server_prototype.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/DeadInsane5/krishi_sakhi_server_prototype/issues"
+  },
+  "homepage": "https://github.com/DeadInsane5/krishi_sakhi_server_prototype#readme"
+}
