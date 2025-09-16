@@ -4,7 +4,7 @@ const Rule = require('../models/rule');
 const router = express.Router();
 
 // 1. Add new rule
-router.post('/rules', async (req, res) => {
+router.post('/api/rules', async (req, res) => {
   try {
     const rule = new Rule(req.body);
     await rule.save();
@@ -15,7 +15,7 @@ router.post('/rules', async (req, res) => {
 });
 
 // 2. Get all rules
-router.get('/rules', async (req, res) => {
+router.get('/api/rules', async (req, res) => {
   try {
     const rules = await Rule.find();
     res.send(rules);
@@ -25,7 +25,7 @@ router.get('/rules', async (req, res) => {
 });
 
 // 3. Generate advice based on condition (simple lookup)
-router.post('/advice', async (req, res) => {
+router.post('/api/advice', async (req, res) => {
   try {
     const { condition } = req.body;  // e.g., { "condition": "soil_type=loamy" }
     const rule = await Rule.findOne({ condition });
