@@ -1,7 +1,7 @@
 {
   "name": "krishi_sakhi_server_prototype",
   "version": "1.0.0",
-  "description": "Node.js + Express backend for **Krishi Sakhi AgriAI**, an integrated AI-powered farming assistant for Kerala's smallholder farmers.   This server handles API requests, authentication, AI orchestration, model inference, pest detection verification, community sync, and data aggregation.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,7 +22,6 @@
   "dependencies": {
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
-    "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "mongoose": "^8.18.1",
     "nodemon": "^3.1.10"
