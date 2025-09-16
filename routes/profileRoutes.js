@@ -9,6 +9,7 @@ router.post("/", async (req, res) => {
     const savedProfile = await newProfile.save();
     res.status(201).json(savedProfile);
   } catch (err) {
+    console.log("error creating user", err);
     res.status(400).json({ error: err.message });
   }
 });
