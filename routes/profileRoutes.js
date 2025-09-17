@@ -1,6 +1,7 @@
-const express = require("express");
+import express from "express";
+import Profile from "../models/profile.js";
+
 const router = express.Router();
-const Profile = require("../models/Profile");
 
 // 1️⃣ Create Profile (POST)
 router.post("/", async (req, res) => {
@@ -48,4 +49,4 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 // Store conversation history (Malayalam/English)
 const conversationSchema = new mongoose.Schema({
@@ -11,4 +11,4 @@ const conversationSchema = new mongoose.Schema({
 
 const Conversation = mongoose.model('Conversation', conversationSchema);
 
-module.exports = Conversation;
+export default Conversation;

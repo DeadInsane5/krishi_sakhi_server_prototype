@@ -1,5 +1,5 @@
-const express = require('express');
-const Event = require('../models/event');
+import express from "express";
+import Event from "../models/event.js";
 
 const router = express.Router();
 
@@ -24,4 +24,4 @@ router.get('/', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

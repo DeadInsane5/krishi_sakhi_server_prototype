@@ -1,8 +1,8 @@
-const express = require('express');
-const multer = require('multer');   // for voice uploads
-const path = require('path');
-const fs = require('fs');
-const Conversation = require('../models/conversation');
+import express from "express";
+import multer from "multer";
+import path from "path";
+import fs from "fs";
+import Conversation from "../models/conversation.js";
 
 const router = express.Router();
 
@@ -15,7 +15,7 @@ router.post('/text', async (req, res) => {
     const { user_id, query } = req.body;
 
     // Here you can plug in ML/NLP logic (Malayalam processing)
-    const response = "നിങ്ങൾ പറഞ്ഞത്: ${query}"; // Simple echo in Malayalam
+    const response = `നിങ്ങൾ പറഞ്ഞത്: ${query}`; // Simple echo in Malayalam
 
     const convo = new Conversation({
       user_id,
@@ -41,7 +41,7 @@ router.post('/voice', upload.single('voice'), async (req, res) => {
     // ✅ TODO: Integrate Speech-to-Text API for Malayalam
     // For now, just fake a response
     const transcribed = "ഇത് ഒരു ഡെമോ വോയ്സ് ഇൻപുട്ടാണ്"; // "This is a demo voice input"
-    const response = "വോയ്സ് പ്രോസസ്സ് ചെയതു: ${transcribed}";
+    const response = `വോയ്സ് പ്രോസസ്സ് ചെയതു: ${transcribed}`;
 
     const convo = new Conversation({
       user_id,
@@ -68,4 +68,4 @@ router.get('/:user_id', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

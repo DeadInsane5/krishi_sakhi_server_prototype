@@ -1,5 +1,5 @@
-const express = require('express');
-const Knowledge = require('../models/knowledge');
+import express from "express";
+import Knowledge from "../models/knowledge.js";
 
 const router = express.Router();
 
@@ -41,4 +41,4 @@ router.get('/search', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

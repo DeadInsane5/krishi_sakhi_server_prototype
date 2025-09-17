@@ -1,6 +1,6 @@
-const express = require('express');
-const schedule = require('node-schedule');
-const UserPref = require('../models/userPref');
+import express from "express";
+import schedule from "node-schedule";
+import UserPref from "../models/userPref.js";
 
 const router = express.Router();
 
@@ -56,4 +56,4 @@ router.post('/schedule', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
