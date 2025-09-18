@@ -1,5 +1,5 @@
-const express = require('express');
-const Rule = require('../models/rule');
+import express from "express";
+import Rule from "../models/rule.js";
 
 const router = express.Router();
 
@@ -40,4 +40,4 @@ router.post('/api/advice', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const profileSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -8,4 +8,4 @@ const profileSchema = new mongoose.Schema({
   irrigation: String,
 });
 
-module.exports = mongoose.model("Profile", profileSchema);
+export default mongoose.model("Profile", profileSchema);

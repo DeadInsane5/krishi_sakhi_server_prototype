@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 // Knowledge base schema (crop calendars, pests, practices)
 const knowledgeSchema = new mongoose.Schema({
@@ -11,4 +11,4 @@ const knowledgeSchema = new mongoose.Schema({
 
 const Knowledge = mongoose.model('Knowledge', knowledgeSchema);
 
-module.exports = Knowledge;
+export default Knowledge;

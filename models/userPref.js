@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 // User Preferences Schema
 const userPrefSchema = new mongoose.Schema({
@@ -12,4 +12,4 @@ const userPrefSchema = new mongoose.Schema({
 
 const UserPref = mongoose.model('UserPref', userPrefSchema);
 
-module.exports = UserPref;
+export default UserPref;

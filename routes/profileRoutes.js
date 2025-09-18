@@ -1,8 +1,9 @@
-const express = require("express");
-const router = express.Router();
-const Profile = require("../models/Profile");
+import express from "express";
+import Profile from "../models/profile.js";
 
-// 1️⃣ Create Profile (POST)
+const router = express.Router();
+
+// Create Profile (POST)
 router.post("/", async (req, res) => {
   try {
     const newProfile = new Profile(req.body);
@@ -14,7 +15,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-// 2️⃣ Get All Profiles (GET)
+// Get All Profiles (GET)
 router.get("/", async (req, res) => {
   try {
     const profiles = await Profile.find();
@@ -24,7 +25,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// 3️⃣ Update Profile (PATCH by ID)
+// Update Profile (PATCH by ID)
 router.patch("/:id", async (req, res) => {
   try {
     const updatedProfile = await Profile.findByIdAndUpdate(
@@ -38,7 +39,7 @@ router.patch("/:id", async (req, res) => {
   }
 });
 
-// 4️⃣ Delete Profile (DELETE by ID)
+// Delete Profile (DELETE by ID)
 router.delete("/:id", async (req, res) => {
   try {
     await Profile.findByIdAndDelete(req.params.id);
@@ -48,4 +49,4 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
